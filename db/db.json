@@ -1,18 +1,52 @@
 {
-  "usuarios": [
+  "receitas": [
     {
-      "id": "187cb7e5-e097-4224-8bc7-b610c855e2b1",
-      "login": "admin",
-      "senha": "123",
-      "nome": "Administrador do Sistema",
-      "email": "admin@abc.com"
+      "id": 1,
+      "titulo": "Bolo de Chocolate",
+      "descricao": "Bolo fofinho e bem chocolatudo, perfeito para festas.",
+      "conteudo": "Ingredientes:\n- 4 ovos\n- 2 xícaras de açúcar\n- 2 xícaras de farinha\n- 1 xícara de cacau\nModo de preparo: Misture tudo e asse por 40 min a 180 °C.",
+      "autor": "Maria Souza",
+      "tempoPreparo": "50 min",
+      "rendimento": "10 porções",
+      "calorias": "320 kcal / porção",
+      "publicacao": "2025-04-20",
+      "imagem": "assets/img/bolo_chocolate.jpeg",
+      "fotos": [
+        { "url": "assets/img/bolo_fatia.jpg", "titulo": "Fatia servida" }
+      ],
+      "destaque": true
     },
     {
-      "id": "ec37c83d-4b7f-458d-9e10-3fda7d37cd3e",
-      "login": "user",
-      "senha": "123",
-      "nome": "Usuario Comum",
-      "email": "user@abc.com"
+      "id": 2,
+      "titulo": "Salada Colorida",
+      "descricao": "Mix crocante de verduras com molho cítrico.",
+      "conteudo": "Ingredientes:\n- Alface\n- Tomate‑cereja\n- Cenoura ralada\n- Molho de limão\nModo de preparo: Misture tudo e sirva gelada.",
+      "autor": "Carlos Ribeiro",
+      "tempoPreparo": "15 min",
+      "rendimento": "4 porções",
+      "calorias": "90 kcal / porção",
+      "publicacao": "2025-04-18",
+      "imagem": "assets/img/salada_colorida.jpeg",
+      "fotos": [
+        { "url": "assets/img/salada_close.jpg", "titulo": "Detalhe da salada" }
+      ],
+      "destaque": false
+    },
+    {
+      "id": 3,
+      "titulo": "Sopa de Legumes",
+      "descricao": "Sopa reconfortante com legumes frescos e caldo aromático.",
+      "conteudo": "Ingredientes:\n- Cenoura\n- Batata\n- Abóbora\n- Caldo de legumes\nModo de preparo: Cozinhe tudo por 30 min e bata levemente.",
+      "autor": "Ana Clara",
+      "tempoPreparo": "40 min",
+      "rendimento": "6 porções",
+      "calorias": "110 kcal / porção",
+      "publicacao": "2025-04-15",
+      "imagem": "assets/img/sopa_panela.jpeg",
+      "fotos": [
+        { "url": "assets/img/sopa.jpg", "titulo": "Sopa servida" }
+      ],
+      "destaque": true
     }
   ]
 }
