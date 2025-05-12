@@ -4,7 +4,7 @@
       "id": 1,
       "titulo": "Bolo de Chocolate",
       "descricao": "Bolo fofinho e bem chocolatudo, perfeito para festas.",
-      "conteudo": "Ingredientes:\n- 4 ovos\n- 2 xícaras de açúcar\n- 2 xícaras de farinha\n- 1 xícara de cacau\nModo de preparo: Misture tudo e asse por 40 min a 180 °C.",
+      "conteudo": "Ingredientes:\n- 4 ovos\n- 2 xícaras de açúcar\n- 2 xícaras de farinha\n- 1 xícara de cacau\nModo de preparo: …",
       "autor": "Maria Souza",
       "tempoPreparo": "50 min",
       "rendimento": "10 porções",
@@ -19,16 +19,16 @@
     {
       "id": 2,
       "titulo": "Salada Colorida",
-      "descricao": "Mix crocante de verduras com molho cítrico.",
-      "conteudo": "Ingredientes:\n- Alface\n- Tomate‑cereja\n- Cenoura ralada\n- Molho de limão\nModo de preparo: Misture tudo e sirva gelada.",
-      "autor": "Carlos Ribeiro",
+      "descricao": "Mix de folhas e legumes crocantes para uma refeição leve.",
+      "conteudo": "Ingredientes:\n- Alface\n- Tomate-cereja\n- Cenoura ralada\n- Molho vinagrete\nModo de preparo: …",
+      "autor": "João Lima",
       "tempoPreparo": "15 min",
       "rendimento": "4 porções",
       "calorias": "90 kcal / porção",
       "publicacao": "2025-04-18",
-      "imagem": "assets/img/salada_colorida.jpeg",
+      "imagem": "assets/img/salada.jpg",
       "fotos": [
-        { "url": "assets/img/salada_close.jpg", "titulo": "Detalhe da salada" }
+        { "url": "assets/img/salada_pronta.webp", "titulo": "Salada pronta" }
       ],
       "destaque": false
     },
@@ -36,7 +36,7 @@
       "id": 3,
       "titulo": "Sopa de Legumes",
       "descricao": "Sopa reconfortante com legumes frescos e caldo aromático.",
-      "conteudo": "Ingredientes:\n- Cenoura\n- Batata\n- Abóbora\n- Caldo de legumes\nModo de preparo: Cozinhe tudo por 30 min e bata levemente.",
+      "conteudo": "Ingredientes:\n- Cenoura\n- Batata\n- Abóbora\n- Caldo de legumes\nModo de preparo: …",
       "autor": "Ana Clara",
       "tempoPreparo": "40 min",
       "rendimento": "6 porções",
@@ -44,7 +44,71 @@
       "publicacao": "2025-04-15",
       "imagem": "assets/img/sopa_panela.jpeg",
       "fotos": [
-        { "url": "assets/img/sopa.jpg", "titulo": "Sopa servida" }
+        { "url": "assets/img/sopa.jpeg", "titulo": "Servida na tigela" }
+      ],
+      "destaque": true
+    },
+    {
+      "id": 4,
+      "titulo": "Penne ao Pesto",
+      "descricao": "Massa com molho pesto de manjericão fresco.",
+      "conteudo": "Ingredientes:\n- 300 g penne\n- 1 maço de manjericão\n- 2 dentes de alho\n- 50 g parmesão\nModo de preparo: …",
+      "autor": "Luís Tavares",
+      "tempoPreparo": "25 min",
+      "rendimento": "3 porções",
+      "calorias": "420 kcal / porção",
+      "publicacao": "2025-04-22",
+      "imagem": "assets/img/penne.jpg",
+      "fotos": [
+        { "url": "assets/img/penne.jpg", "titulo": "Close no pesto" }
+      ],
+      "destaque": false
+    },
+    {
+      "id": 5,
+      "titulo": "Tacos Mexicanos",
+      "descricao": "Tortilhas crocantes com carne temperada e vegetais.",
+      "conteudo": "Ingredientes:\n- 6 tortilhas\n- 300 g carne moída\n- Alface, tomate, queijo\nModo de preparo: …",
+      "autor": "Carla Méndez",
+      "tempoPreparo": "30 min",
+      "rendimento": "6 unidades",
+      "calorias": "180 kcal / taco",
+      "publicacao": "2025-04-23",
+      "imagem": "assets/img/tacos.webp",
+      "fotos": [
+        { "url": "assets/img/tacos_montagem.jpeg", "titulo": "Montagem dos tacos" }
+      ],
+      "destaque": true
+    },
+    {
+      "id": 6,
+      "titulo": "Panqueca de Banana",
+      "descricao": "Panqueca saudável sem glúten, ideal para o café da manhã.",
+      "conteudo": "Ingredientes:\n- 1 banana madura\n- 1 ovo\n- 2 col. sopa aveia\nModo de preparo: …",
+      "autor": "Renata Lopes",
+      "tempoPreparo": "10 min",
+      "rendimento": "2 unidades",
+      "calorias": "120 kcal / unidade",
+      "publicacao": "2025-04-24",
+      "imagem": "assets/img/panqueca.jpeg",
+      "fotos": [
+        { "url": "assets/img/panqueca_mel.jpeg", "titulo": "Servida com mel" }
+      ],
+      "destaque": false
+    },
+    {
+      "id": 7,
+      "titulo": "Cheesecake de Frutas Vermelhas",
+      "descricao": "Cheesecake cremoso com cobertura de morangos e mirtilos.",
+      "conteudo": "Ingredientes:\n- 200 g bolacha maisena\n- 600 g cream cheese\n- Geleia de frutas vermelhas\nModo de preparo: …",
+      "autor": "Patrícia Andrade",
+      "tempoPreparo": "4 h (geladeira)",
+      "rendimento": "12 fatias",
+      "calorias": "350 kcal / fatia",
+      "publicacao": "2025-04-25",
+      "imagem": "assets/img/cake.jpeg",
+      "fotos": [
+        { "url": "assets/img/fatia.jpeg", "titulo": "Fatia pronta" }
       ],
       "destaque": true
     }

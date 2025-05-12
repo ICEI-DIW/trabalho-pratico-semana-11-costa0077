@@ -4,19 +4,23 @@ Nessa etapa, vamos evoluir o projeto anterior e contemplar um ambiente de desenv
 
 ## Informações do trabalho
 
-- Nome:
-- Matricula:
-- Proposta de projeto escolhida:
-- Breve descrição sobre seu projeto:
+- Nome: Felipe Costa Lisboa 
+- Matricula: 880628
+- Proposta de projeto escolhida: Receitas & Sabores
+- Breve descrição sobre seu projeto: Aplicação Receitas & Sabores – um mini‑portal culinário que demonstra a arquitetura front‑end + back‑end simulada com JSON Server.
 
-**Print do teste da API com visualização do JSON**
+Front‑end (public/): páginas index.html e detalhes.html responsivas (Bootstrap 5). A home carrega a lista de receitas e o carrossel de destaques; a página de detalhes exibe informações completas, galeria de fotos e dados nutricionais.
+
+Back‑end (db/db.json): base de dados em formato JSON exposta como API RESTful (/receitas), consumida via fetch assíncrono.
+
+![alt text](image.png)
 
 <<  COLOQUE A IMAGEM AQUI >>
 
 **Print da aba NETWORK com requisições Fetch/XHR**
 
-<<  COLOQUE A IMAGEM AQUI >>
-
+![alt text](image-1.png)
+![alt text](image-2.png)
 ## **Orientações Gerais**
 
 Nesse projeto você vai encontrar a seguinte estrutura base:

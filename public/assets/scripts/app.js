@@ -1,164 +1,26 @@
-const dados = [
-  {
-    id: 1,
-    titulo: "Bolo de Chocolate",
-    descricao: "Bolo fofinho e bem chocolatudo, perfeito para festas.",
-    conteudo:
-      `Ingredientes:
-- 4 ovos
-- 2 xícaras de açúcar
-- 2 xícaras de farinha
-- 1 xícara de cacau
-Modo de preparo: …`,
-    autor: "Maria Souza",
-    tempoPreparo: "50 min",
-    rendimento: "10 porções",
-    calorias: "320 kcal / porção",
-    publicacao: "2025-04-20",
-    imagem: "assets/img/bolo_chocolate.jpeg",
-    fotos: [
-      { url: "assets/img/bolo_fatia.jpg", titulo: "Fatia servida" },
-    ],
-    destaque: true
-  },
-  {
-    id: 2,
-    titulo: "Salada Colorida",
-    descricao: "Mix de folhas e legumes crocantes para uma refeição leve.",
-    conteudo:
-      `Ingredientes:
-- Alface
-- Tomate-cereja
-- Cenoura ralada
-- Molho vinagrete
-Modo de preparo: …`,
-    autor: "João Lima",
-    tempoPreparo: "15 min",
-    rendimento: "4 porções",
-    calorias: "90 kcal / porção",
-    publicacao: "2025-04-18",
-    imagem: "assets/img/salada.jpg",
-    fotos: [
-      { url: "assets/img/salada_pronta.webp", titulo: "Salada pronta" }
-    ],
-    destaque: false
-  },
-  {
-    id: 3,
-    titulo: "Sopa de Legumes",
-    descricao: "Sopa reconfortante com legumes frescos e caldo aromático.",
-    conteudo:
-      `Ingredientes:
-- Cenoura
-- Batata
-- Abóbora
-- Caldo de legumes
-Modo de preparo: …`,
-    autor: "Ana Clara",
-    tempoPreparo: "40 min",
-    rendimento: "6 porções",
-    calorias: "110 kcal / porção",
-    publicacao: "2025-04-15",
-    imagem: "assets/img/sopa_panela.jpeg",
-    fotos: [
-      { url: "assets/img/sopa.jpeg", titulo: "Servida na tigela" }
-    ],
-    destaque: true
-  },
-  {
-    id: 4,
-    titulo: "Penne ao Pesto",
-    descricao: "Massa com molho pesto de manjericão fresco.",
-    conteudo:
-      `Ingredientes:
-- 300 g penne
-- 1 maço de manjericão
-- 2 dentes de alho
-- 50 g parmesão
-Modo de preparo: …`,
-    autor: "Luís Tavares",
-    tempoPreparo: "25 min",
-    rendimento: "3 porções",
-    calorias: "420 kcal / porção",
-    publicacao: "2025-04-22",
-    imagem: "assets/img/penne.jpg",
-    fotos: [
-      { url: "assets/img/penne.jpg", titulo: "Close no pesto" }
-    ],
-    destaque: false
-  },
-  {
-    id: 5,
-    titulo: "Tacos Mexicanos",
-    descricao: "Tortilhas crocantes com carne temperada e vegetais.",
-    conteudo:
-      `Ingredientes:
-- 6 tortilhas
-- 300 g carne moída
-- Alface, tomate, queijo
-Modo de preparo: …`,
-    autor: "Carla Méndez",
-    tempoPreparo: "30 min",
-    rendimento: "6 unidades",
-    calorias: "180 kcal / taco",
-    publicacao: "2025-04-23",
-    imagem: "assets/img/tacos.webp",
-    fotos: [
-      { url: "assets/img/tacos_montagem.jpeg", titulo: "Montagem dos tacos" }
-    ],
-    destaque: true
-  },
-  {
-    id: 6,
-    titulo: "Panqueca de Banana",
-    descricao: "Panqueca saudável sem glúten, ideal para o café da manhã.",
-    conteudo:
-      `Ingredientes:
-- 1 banana madura
-- 1 ovo
-- 2 col. sopa aveia
-Modo de preparo: …`,
-    autor: "Renata Lopes",
-    tempoPreparo: "10 min",
-    rendimento: "2 unidades",
-    calorias: "120 kcal / unidade",
-    publicacao: "2025-04-24",
-    imagem: "assets/img/panqueca.jpeg",
-    fotos: [
-      { url: "assets/img/panqueca_mel.jpeg", titulo: "Servida com mel" }
-    ],
-    destaque: false
-  },
-  {
-    id: 7,
-    titulo: "Cheesecake de Frutas Vermelhas",
-    descricao: "Cheesecake cremoso com cobertura de morangos e mirtilos.",
-    conteudo:
-      `Ingredientes:
-- 200 g bolacha maisena
-- 600 g cream cheese
-- Geleia de frutas vermelhas
-Modo de preparo: …`,
-    autor: "Patrícia Andrade",
-    tempoPreparo: "4 h (geladeira)",
-    rendimento: "12 fatias",
-    calorias: "350 kcal / fatia",
-    publicacao: "2025-04-25",
-    imagem: "assets/img/cake.jpeg",
-    fotos: [
-      { url: "assets/img/fatia.jpeg", titulo: "Fatia pronta" }
-    ],
-    destaque: true
-  }
-];
+const API = "http://localhost:3000/receitas";   
+let dados = [];                             
 
 function getQueryParam(key) {
   return new URLSearchParams(window.location.search).get(key);
 }
 
+
+async function fetchAll() {
+  const resp = await fetch(API);
+  if (!resp.ok) throw new Error("Falha ao carregar lista");
+  dados = await resp.json();                   
+}
+
+async function fetchById(id) {
+  const resp = await fetch(`${API}/${id}`);
+  if (!resp.ok) return null;
+  return resp.json();
+}
+
 function renderCarousel() {
   const wrap = document.getElementById("carousel-items");
-  const dots = document.getElementById("carousel-dots");    
+  const dots = document.getElementById("carousel-dots");
   if (!wrap || !dots) return;
 
   dados.filter(d => d.destaque).forEach((item, i) => {
@@ -201,12 +63,10 @@ function renderCards() {
   });
 }
 
-function renderDetalhes() {
+function renderDetalhes(item) {
   const cont = document.getElementById("detalhe-container");
   if (!cont) return;
 
-  const id = parseInt(getQueryParam("id"), 10);
-  const item = dados.find(d => d.id === id);
   if (!item) {
     cont.innerHTML = `<p class="text-center">Item não encontrado.</p>`;
     return;
@@ -247,8 +107,17 @@ function renderDetalhes() {
   `;
 }
 
-window.addEventListener("DOMContentLoaded", () => {
-  renderCarousel();
-  renderCards();
-  renderDetalhes();
+window.addEventListener("DOMContentLoaded", async () => {
+  if (document.getElementById("cards-container")) {
+    await fetchAll();
+    renderCarousel();
+    renderCards();
+  }
+
+  // Página de detalhes
+  if (document.getElementById("detalhe-container")) {
+    const id = parseInt(getQueryParam("id"), 10);
+    const item = await fetchById(id);
+    renderDetalhes(item);
+  }
 });
